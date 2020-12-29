@@ -71,7 +71,7 @@
                 <HospitalVendors />
             </tab-content>
             <tab-content title="Community">
-                Yuhuuu! This seems pretty damn simple
+                <HospitalCommunity />
             </tab-content>
         </form-wizard>
         <v-select :items="states"></v-select>
@@ -82,10 +82,12 @@
 import {mapActions} from 'vuex';
 import HospitalManagement from '@/components/HospitalManagement.vue';
 import HospitalVendors from '@/components/HospitalVendors.vue';
+import HospitalCommunity from '@/components/HospitalCommunity.vue';
 export default {
     components: {
         HospitalManagement,
-        HospitalVendors
+        HospitalVendors,
+        HospitalCommunity
     },
     data(){
         const summary = {
@@ -96,13 +98,13 @@ export default {
             profile_year: "",
             profile_name: "",
             year_founded: "",
-            part_of_HCO: false,
+            part_of_HCO: null,
             HCO_name: "",
-            other_healthcare_entities: false,
+            other_healthcare_entities: null,
             name_other_entities: "",
             hospital_incorporated: "",
             member_of_associations: "",
-            mission_statement_yn: false,
+            mission_statement_yn: null,
             mission_statement_loc: "",
             mission_statement: "",
             mission_last_updated: "",
